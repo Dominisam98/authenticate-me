@@ -47,3 +47,13 @@
   #home:hover, #home:active {
     background-color: red;
   }
+
+ h1 {
+   color: olivedrab;
+font-family: arial, sans-serif;
+font-weight: bold;
+margin-top: 0px;
+margin-bottom: 1px;
+text-align: center;
+  border: 3px solid green;
+ }

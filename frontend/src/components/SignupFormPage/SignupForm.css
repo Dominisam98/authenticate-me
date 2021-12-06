@@ -1,0 +1,17 @@
+.signupform{
+    background-color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* #user{
+    position: relative;
+    top:5px
+}
+
+#passw{
+    position: relative;
+    top:5px
+} */
