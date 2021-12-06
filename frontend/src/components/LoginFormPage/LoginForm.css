@@ -15,3 +15,13 @@
     position: relative;
     top:5px;
 }
+
+.submit{
+    background-color: #4eb5f1;
+    font-weight: 300;
+}
+
+.submit:hover{
+    background-color:#4095c6;
+}
+

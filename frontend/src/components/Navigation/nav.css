@@ -1,8 +1,10 @@
 .logSign{
     position:relative;
+    animation:logsign 5s infinite linear;
     display: flex;
     justify-content: space-evenly;
 }
+
 
 #login{
     position: relative;

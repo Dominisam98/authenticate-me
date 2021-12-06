@@ -69,7 +69,7 @@ function SignupFormPage() {
           required
         />
       </label>
-      <button type="submit">Sign Up</button>
+      <button className='submit' type="submit">Sign Up</button>
     </form>
   );
 }
