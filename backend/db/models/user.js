@@ -87,6 +87,21 @@ module.exports = (sequelize, DataTypes) => {
     return await User.scope('currentUser').findByPk(user.id);
   };
 
+  User.demoLogin = async function ({ demoCredential, demoPassword }) {
+    const { Op } = require('sequelize');
+    const user = await User.scope('loginUser').findOne({
+      where: {
+        [Op.or]: {
+          username: demoCredential,
+          email: demoCredential
+        }
+      }
+    });
+    if (user && user.validatePassword(demoPassword)) {
+      return await User.scope('currentUser').findByPk(user.id);
+    }
+  };
+
   User.associate = function(models) {
     // associations can be defined here
   };

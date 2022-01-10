@@ -25,6 +25,24 @@ function LoginFormPage() {
       });
   }
 
+  const demoLogin = (e) => {
+    e.preventDefault();
+    const demoCredential ='Demo-lition';
+    const demoPassword = 'password';
+    setErrors([]);
+    return dispatch(sessionActions.demoLogin({ demoCredential, demoPassword })).catch(
+      async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      }
+    );
+  }
+
+
+
+
+
+
   return (
     <form className="loginForm" onSubmit={handleSubmit}>
       <ul>
@@ -48,6 +66,7 @@ function LoginFormPage() {
           required
         />
       </label>
+      <button className='login-button' id='demo' onClick={demoLogin}>Demo</button>
       <button className='submit' type="submit">Log In</button>
     </form>
   );
