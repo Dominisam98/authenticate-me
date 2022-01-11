@@ -9,6 +9,8 @@ const isProduction = environment === 'production';
 const app = express();
 const { ValidationError } = require('sequelize');
 const routes = require('./routes');
+const indexRouter = require('./routes/index');
+const entryRouter = require('./routes/api/entry');
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(express.json());
@@ -38,6 +40,8 @@ if (!isProduction) {
 
 
   app.use(routes);
+  app.use('/', indexRouter);
+  app.use('/entry', entryRouter);
 
 
   app.use((_req, _res, next) => {

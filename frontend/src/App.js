@@ -5,6 +5,8 @@ import { Route, Switch } from "react-router-dom";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
+import CreateEntryForm from "./components/createEntryPage";
+import AllEntries from "./components/AllEntries/allEntries";
 import Navigation from "./components/Navigation";
 import MainPage from "./components/MainPage";
 
@@ -23,11 +25,17 @@ function App() {
           <Route path='/' exact>
           <MainPage isLoaded={isLoaded} />
           </Route>
+          <Route path='/entries/new'>
+            <CreateEntryForm />
+          </Route>
           <Route path="/login">
             <LoginFormPage />
           </Route>
           <Route path="/signup">
             <SignupFormPage />
+          </Route>
+          <Route path='/entries'>
+            <AllEntries isLoaded={isLoaded} />
           </Route>
         </Switch>
       )}
