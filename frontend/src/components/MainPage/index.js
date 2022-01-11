@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import './Main.css';
-// import AllEntries from '../AllEntriesPage';
+
 
 
 function MainPage({ isLoaded }) {
