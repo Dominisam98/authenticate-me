@@ -24,7 +24,7 @@ function Navigation({ isLoaded }){
 
   return (
   <>
-    <h1>Authenticate Me</h1>
+    <h1>SweetNote</h1>
     <ul>
       <li className='logSign'>
         <NavLink id="home" exact to="/">Home</NavLink>
