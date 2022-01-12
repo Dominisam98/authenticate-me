@@ -18,7 +18,7 @@ const AllEntries = ({ isLoaded }) => {
             <>
                 <div className='grid-container'>
                     {isLoaded && entryArray.map(entry => (
-                        <NavLink className='entries' to={`/cookbooks/${entry?.cookbook_id}/entries/${entry?.id}`}>
+                        <NavLink className='entries' to={`/edit/${entry?.id}`}>
                             <div className='entry-card' key={`${entry?.id}`}>
                                 <h4 className='entry-card'>{entry?.title}</h4>
                                 <p className='entry-card'>{entry?.body}</p>

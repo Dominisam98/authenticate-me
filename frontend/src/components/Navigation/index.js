@@ -28,6 +28,7 @@ function Navigation({ isLoaded }){
     <ul>
       <li className='logSign'>
         <NavLink id="home" exact to="/">Home</NavLink>
+        <NavLink id="home" exact to="/entries/new">New Pastry</NavLink>
         {isLoaded && sessionLinks}
       </li>
     </ul>

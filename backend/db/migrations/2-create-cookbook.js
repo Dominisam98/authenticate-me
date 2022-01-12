@@ -3,7 +3,7 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Cookbooks', {
       id: {
-        allowNull: false,
+        allowNull: true,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER

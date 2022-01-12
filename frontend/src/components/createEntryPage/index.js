@@ -10,7 +10,9 @@ const CreateEntryForm = () => {
     const dispatch = useDispatch();
     const history = useHistory();
     const sessionUser = useSelector(state => state.session.user);
-    const { cookBookId } = useParams();
+    const { entryId } = useParams();
+
+     console.log(entryId)
 
     const updateTitle = e => setTitle(e.target.value);
     const updateBody = e => setBody(e.target.value);
@@ -21,11 +23,11 @@ const CreateEntryForm = () => {
         const payload = {
             title,
             body,
-            cookbook_id: cookBookId
+            entry_id: entryId
         };
 
         const entry = await dispatch(createEntry(payload));
-        if (entry) history.push(`/cookbooks/${cookBookId}`);
+        if (entry) history.push(`/entries`);
     }
     if (sessionUser) {
         return (

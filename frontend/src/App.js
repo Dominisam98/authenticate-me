@@ -9,7 +9,8 @@ import CreateEntryForm from "./components/createEntryPage";
 import AllEntries from "./components/AllEntries/allEntries";
 import Navigation from "./components/Navigation";
 import MainPage from "./components/MainPage";
-
+import EditEntryForm from "./components/editEntryPage";
+import EntryDetail from "./components/entrydetails";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,6 +28,10 @@ function App() {
           </Route>
           <Route path='/entries/new'>
             <CreateEntryForm />
+          </Route>
+          <Route path='/edit/:entryId'>
+            <EditEntryForm />
+            {/* <EntryDetail /> */}
           </Route>
           <Route path="/login">
             <LoginFormPage />
