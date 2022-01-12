@@ -11,7 +11,10 @@ function Navigation({ isLoaded }){
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
+    <>
+      <NavLink id="home" exact to="/entries/new">New Pastry</NavLink>
       <ProfileButton user={sessionUser} />
+    </>
     );
   } else {
     sessionLinks = (
@@ -28,7 +31,6 @@ function Navigation({ isLoaded }){
     <ul>
       <li className='logSign'>
         <NavLink id="home" exact to="/">Home</NavLink>
-        <NavLink id="home" exact to="/entries/new">New Pastry</NavLink>
         {isLoaded && sessionLinks}
       </li>
     </ul>

@@ -12,8 +12,8 @@ const validateEntry = [
     check('title')
         .exists({ checkFalsy: true })
         .withMessage('Please provide a title.')
-        .isLength({ min: 3 })
-        .withMessage('Title must be at least 3 characters'),
+        .isLength({ min: 2 })
+        .withMessage('Title must be at least 2 characters'),
     handleValidationErrors
 ];
 
