@@ -5,7 +5,13 @@ div.home {
     width: 40%;
     margin: auto;
 }
-
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+}
 #button {
     font-family: "Soleil_Bold",Helvetica,Arial,sans-serif;
     background: hotpink;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createEntry } from "../../store/entry";
 import { useHistory, Redirect, useParams } from "react-router-dom";
-
+import './createEntry.css'
 
 const CreateEntryForm = () => {
     const [title, setTitle] = useState('');
@@ -35,13 +35,13 @@ const CreateEntryForm = () => {
                 <form id='new-entry' onSubmit={handleSubmit}>
                     <input
                         type='text'
-                        placeholder='Title'
+                        placeholder='Name of pastry'
                         value={title}
                         onChange={updateTitle}
                         required
                     />
                     <textarea
-                        placeholder='Start typing your entry here...'
+                        placeholder='Create your pastry here...'
                         value={body}
                         onChange={updateBody}
                         required

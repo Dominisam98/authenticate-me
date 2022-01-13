@@ -13,6 +13,7 @@ function Navigation({ isLoaded }){
     sessionLinks = (
     <>
       <NavLink id="home" exact to="/entries/new">New Pastry</NavLink>
+      <NavLink id="home" exact to="/entries">Pastry Feed</NavLink>
       <ProfileButton user={sessionUser} />
     </>
     );
