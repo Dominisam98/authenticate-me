@@ -12,7 +12,7 @@ const CreateEntryForm = () => {
     const sessionUser = useSelector(state => state.session.user);
     const { entryId } = useParams();
 
-     console.log(entryId)
+
 
     const updateTitle = e => setTitle(e.target.value);
     const updateBody = e => setBody(e.target.value);
@@ -34,6 +34,7 @@ const CreateEntryForm = () => {
             <>
                 <form id='new-entry' onSubmit={handleSubmit}>
                     <input
+                        className="nameBox"
                         type='text'
                         placeholder='Name of pastry'
                         value={title}
@@ -41,12 +42,13 @@ const CreateEntryForm = () => {
                         required
                     />
                     <textarea
-                        placeholder='Create your pastry here...'
+                        className="textbox"
+                        placeholder='Create your pastry recipe here...'
                         value={body}
                         onChange={updateBody}
                         required
                     />
-                    <button type='submit' onSubmit={handleSubmit}>Save</button>
+                    <button type='submit' className="save" onSubmit={handleSubmit}>Save</button>
                 </form>
             </>
         )

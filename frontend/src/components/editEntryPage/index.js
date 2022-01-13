@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getOneEntry, updateEntry, deleteEntry } from "../../store/entry";
 import { useParams, useHistory, Redirect, NavLink } from "react-router-dom";
-
+import './editEntry.css'
 
 const EditEntryForm = () => {
     const { entryId } = useParams();
@@ -42,24 +42,25 @@ const EditEntryForm = () => {
             <>
                 <form id='new-entry' onSubmit={handleSubmit}>
                     <input
+                        className="namebox"
                         type='text'
                         value={title}
                         onChange={updateTitle}
                         required
                     />
                     <textarea
+                        className="textbox"
                         value={body}
                         onChange={updateBody}
                         required
                     />
-                    <button type='submit'>Edit</button>
+                    <button className="save" type='submit'>Edit</button>
                     <NavLink to='/entries'>
                             <button
-                                className='options'
+                                className='save'
                                 id='del-button'
                                 onClick={dhandleSubmit}
-                            >
-                                Delete
+                            >Delete
                             </button>
                         </NavLink>
                 </form>
@@ -68,7 +69,7 @@ const EditEntryForm = () => {
     } else {
         return (
             <>
-                <Redirect to='/error-user' />
+                <Redirect to='/' />
             </>
         );
     }

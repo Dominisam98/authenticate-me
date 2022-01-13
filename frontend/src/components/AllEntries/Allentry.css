@@ -12,13 +12,13 @@
 
     }
     :root {
-        --mainColor: pink;
+        --mainColor: transparent;
       }
     .card {
         background:
            linear-gradient(
              to right,
-             var(--mainColor) 0%,
+             var(--mainColor) -10%,
              var(--mainColor) 5px,
              transparent 5px
            );
@@ -44,7 +44,7 @@
           direction: center;
           padding-left: 30px;
       }
-      
+
       /* .entries{
           display: flex;
           justify-content: center;
