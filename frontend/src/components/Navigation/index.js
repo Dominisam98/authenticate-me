@@ -14,6 +14,7 @@ function Navigation({ isLoaded }){
     <>
       <NavLink id="home" exact to="/entries/new">New Pastry</NavLink>
       <NavLink id="home" exact to="/entries">Pastry Feed</NavLink>
+      <NavLink id="home" exact to="/about">About Me</NavLink>
       <ProfileButton user={sessionUser} />
     </>
     );

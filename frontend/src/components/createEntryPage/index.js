@@ -53,7 +53,7 @@ const CreateEntryForm = () => {
     } else {
         return (
             <>
-                <Redirect to='/error-user' />
+                <Redirect to='/' />
             </>
         );
     }

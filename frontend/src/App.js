@@ -11,6 +11,7 @@ import Navigation from "./components/Navigation";
 import MainPage from "./components/MainPage";
 import EditEntryForm from "./components/editEntryPage";
 import EntryDetail from "./components/entrydetails";
+import AboutMe from "./components/About";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
@@ -41,6 +42,9 @@ function App() {
           </Route>
           <Route path='/entries'>
             <AllEntries isLoaded={isLoaded} />
+          </Route>
+          <Route path='/about'>
+            <AboutMe isLoaded={isLoaded} />
           </Route>
         </Switch>
       )}
