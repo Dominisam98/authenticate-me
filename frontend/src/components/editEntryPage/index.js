@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getOneEntry, updateEntry, deleteEntry } from "../../store/entry";
+import { getOneEntry, updateEntry, deleteEntry, getAllEntries, createEntry } from "../../store/entry";
 import { useParams, useHistory, Redirect, NavLink } from "react-router-dom";
 import './editEntry.css'
 
@@ -33,9 +33,12 @@ const EditEntryForm = () => {
             title,
             body
         };
+     await dispatch(updateEntry(payload));
 
-        await dispatch(updateEntry(payload));
-        history.push(`/entries`);
+        // await dispatch(updateEntry(payload));
+        await dispatch(getAllEntries());
+
+     history.push(`/entries`);
     }
     if (sessionUser) {
         return (
@@ -46,15 +49,17 @@ const EditEntryForm = () => {
                         type='text'
                         value={title}
                         onChange={updateTitle}
-                        required
+
                     />
                     <textarea
                         className="textbox"
                         value={body}
                         onChange={updateBody}
-                        required
+
                     />
-                    <button className="save" type='submit'>Edit</button>
+
+                        <button className="save"  type='submit'>Edit</button>
+
                     <NavLink to='/entries'>
                             <button
                                 className='save'

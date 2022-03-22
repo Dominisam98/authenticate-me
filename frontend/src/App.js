@@ -10,7 +10,7 @@ import AllEntries from "./components/AllEntries/allEntries";
 import Navigation from "./components/Navigation";
 import MainPage from "./components/MainPage";
 import EditEntryForm from "./components/editEntryPage";
-import EntryDetail from "./components/entrydetails";
+// import EntryDetail from "./components/entrydetails";
 import AboutMe from "./components/About";
 function App() {
   const dispatch = useDispatch();

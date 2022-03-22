@@ -8,7 +8,7 @@ const AboutMe = ({ isLoaded }) => {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getAllEntries());
+         dispatch(getAllEntries());
     }, [dispatch]);
     const entries = useSelector(state => state.entry);
     const entryArray = Object.values(entries);

@@ -77,6 +77,8 @@ export const updateEntry = (data) => async (dispatch) => {
     }
 };
 
+
+
 export const deleteEntry = entryId => async dispatch => {
     const response = await csrfFetch(`/api/entries/${entryId}`, { method: 'delete', });
 
@@ -89,15 +91,15 @@ export const deleteEntry = entryId => async dispatch => {
 const entryReducer = (state = {}, action) => {
     let newState;
     switch (action.type) {
-        case ADD_ENTRY:
-            if (state && action.entry && !state[action.entry.id]) {
-                newState = {
-                    [action.entry.id]: action.entry
-                };
-            } else {
-                newState = { ...state }
-            }
-            return newState;
+        // case ADD_ENTRY:
+        //     if (state && action.entry && !state[action.entry.id]) {
+        //         newState = {
+        //             [action.entry.id]: action.entry
+        //         };
+        //     } else {
+        //         newState = { ...state }
+        //     }
+        //     return newState;
         case REMOVE_ENTRY:
             newState = { ...state };
             delete newState[action.entryId];

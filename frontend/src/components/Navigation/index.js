@@ -12,6 +12,7 @@ function Navigation({ isLoaded }){
   if (sessionUser) {
     sessionLinks = (
     <>
+      <NavLink id="home" exact to="/">Home</NavLink>
       <NavLink id="home" exact to="/entries/new">New Pastry</NavLink>
       <NavLink id="home" exact to="/entries">Pastry Feed</NavLink>
       <NavLink id="home" exact to="/about">About Me</NavLink>
@@ -32,7 +33,6 @@ function Navigation({ isLoaded }){
     <h1>SweetNote</h1>
     <ul>
       <li className='logSign'>
-        <NavLink id="home" exact to="/">Home</NavLink>
         {isLoaded && sessionLinks}
       </li>
     </ul>
