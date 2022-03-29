@@ -135,7 +135,7 @@
 	font-family:Courier, monospace;
 	height:28px;
 	font-weight:bold;
-	/* width:220px; */
+
 	resize: both;
 	overflow: auto;
 }

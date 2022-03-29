@@ -32,24 +32,6 @@ const CreateEntryForm = () => {
     if (sessionUser) {
         return (
             <>
-                {/* <form id='new-entry' onSubmit={handleSubmit}>
-                    <input
-                        className="nameBox"
-                        type='text'
-                        placeholder='Name of pastry'
-                        value={title}
-                        onChange={updateTitle}
-                        required
-                    />
-                    <textarea
-                        className="textbox"
-                        placeholder='Create your pastry recipe here...'
-                        value={body}
-                        onChange={updateBody}
-                        required
-                    />
-                    <button type='submit' className="save" onSubmit={handleSubmit}>Save</button>
-                </form> */}
                 <div id="wrapper">
 
 	            <form id="paper" onSubmit={handleSubmit}>

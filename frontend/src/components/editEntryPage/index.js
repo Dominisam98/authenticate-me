@@ -23,7 +23,7 @@ const EditEntryForm = () => {
     const dhandleSubmit = async e => {
         e.preventDefault();
         if (window.confirm('Are you sure you wish to delete this item?')) dispatch(deleteEntry(entryId));
-        // alert('You clicked me!');
+       
         history.push(`/entries`);
 
     }
@@ -37,7 +37,7 @@ const EditEntryForm = () => {
         };
      await dispatch(updateEntry(payload));
 
-        // await dispatch(updateEntry(payload));
+
         await dispatch(getAllEntries());
 
      history.push(`/entries`);
@@ -63,7 +63,6 @@ const EditEntryForm = () => {
 
 
 
-                        {/* <button className="save"  type='submit'>Edit</button> */}
 
                     <NavLink to='/entries'>
                             <button
