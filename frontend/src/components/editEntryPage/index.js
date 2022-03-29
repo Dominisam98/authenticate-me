@@ -45,22 +45,25 @@ const EditEntryForm = () => {
     if (sessionUser) {
         return (
             <>
-                <form id='new-entry' onSubmit={handleSubmit}>
-                    <input
-                        className="namebox"
-                        type='text'
-                        value={title}
-                        onChange={updateTitle}
+               <div id="wrapper">
 
-                    />
-                    <textarea
-                        className="textbox"
-                        value={body}
-                        onChange={updateBody}
+            <form id="paper" onSubmit={handleSubmit}>
 
-                    />
+             <div id="margin">Title: <input id="title" type="text" name="title" placeholder='Name of pastry'
+             value={title}
+              onChange={updateTitle}
+             required/></div>
+         <textarea  className="textbox"
+        placeholder='Create your pastry recipe here...'
+        value={body}
+        onChange={updateBody}
+        required id="text" name="text" rows="4" />
+        <br/>
+        <button className="save"  type='submit'>Edit</button>
 
-                        <button className="save"  type='submit'>Edit</button>
+
+
+                        {/* <button className="save"  type='submit'>Edit</button> */}
 
                     <NavLink to='/entries'>
                             <button
@@ -71,7 +74,7 @@ const EditEntryForm = () => {
                             >Delete
                             </button>
                         </NavLink>
-                </form>
+                </form></div>
             </>
         )
     } else {
