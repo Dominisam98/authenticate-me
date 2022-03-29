@@ -32,7 +32,7 @@ const CreateEntryForm = () => {
     if (sessionUser) {
         return (
             <>
-                <form id='new-entry' onSubmit={handleSubmit}>
+                {/* <form id='new-entry' onSubmit={handleSubmit}>
                     <input
                         className="nameBox"
                         type='text'
@@ -49,7 +49,24 @@ const CreateEntryForm = () => {
                         required
                     />
                     <button type='submit' className="save" onSubmit={handleSubmit}>Save</button>
-                </form>
+                </form> */}
+                <div id="wrapper">
+
+	            <form id="paper" onSubmit={handleSubmit}>
+
+		        <div id="margin">Title: <input id="title" type="text" name="title" placeholder='Name of pastry'
+                        value={title}
+                        onChange={updateTitle}
+                        required/></div>
+		        <textarea  className="textbox"
+                        placeholder='Create your pastry recipe here...'
+                        value={body}
+                        onChange={updateBody}
+                        required id="text" name="text" rows="4" />
+		        <br/>
+                <button type='submit' className="save" onSubmit={handleSubmit}>Save</button>
+
+	            </form></div>
             </>
         )
     } else {
