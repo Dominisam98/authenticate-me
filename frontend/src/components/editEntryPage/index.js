@@ -22,8 +22,10 @@ const EditEntryForm = () => {
     const updateBody = e => setBody(e.target.value);
     const dhandleSubmit = async e => {
         e.preventDefault();
-        dispatch(deleteEntry(entryId));
+        if (window.confirm('Are you sure you wish to delete this item?')) dispatch(deleteEntry(entryId));
+        // alert('You clicked me!');
         history.push(`/entries`);
+
     }
     const handleSubmit = async e => {
         e.preventDefault();
@@ -65,6 +67,7 @@ const EditEntryForm = () => {
                                 className='save'
                                 id='del-button'
                                 onClick={dhandleSubmit}
+
                             >Delete
                             </button>
                         </NavLink>
