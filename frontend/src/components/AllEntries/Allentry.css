@@ -14,6 +14,9 @@
     }
 
     .card {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
       /* Change background color */
       background-color: white;
 
@@ -56,6 +59,7 @@
       .innertext{
           display: flex;
           direction: center;
+          flex-direction: row;
           padding-left: 30px;
       }
 
