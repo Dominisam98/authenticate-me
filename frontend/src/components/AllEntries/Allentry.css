@@ -28,9 +28,9 @@
 
       border-radius: 12px;
     }
-    :root {
+    /* :root {
         --mainColor: transparent;
-      }
+      } */
     .card {
         background:
            linear-gradient(
@@ -39,11 +39,11 @@
              var(--mainColor) 5px,
              transparent 5px
            );
-        background-repeat: repeat-x;
-        background-size: 100%;
+        /* background-repeat: repeat-x;
+        background-size: 50%;
         color: #000;
-        padding-left: 10px;
-        text-decoration: none;
+        padding-left: 10px; */
+
       }
 
       .card:hover {
@@ -67,3 +67,53 @@
           display: flex;
           justify-content: center;
       } */
+
+      .title {
+        font-size: 2em;
+        color: #e74c3c;
+      }
+      .card {
+        background: white;
+        margin-bottom: 2em;
+      }
+
+      .entries{
+        text-decoration: none;
+        width: 100%;
+      }
+      .card  {
+        color: black;
+        text-decoration: none;
+      }
+
+      .card .entries:hover {
+        box-shadow: 3px 3px 8px hsl(0, 0%, 70%);
+      }
+
+      .card {
+        margin-bottom: 2em;
+        display: flex;
+        flex: 0 1 calc(33% - 0.5em);
+        width: calc(33% - 1em);
+
+
+      }
+
+      .card-content h2 {
+        margin-top: 0;
+        margin-bottom: .5em;
+        font-weight: normal;
+      }
+
+      .card-content p {
+        font-size: 95%;
+      }
+
+      .grid-container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+
+      }

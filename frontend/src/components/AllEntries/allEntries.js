@@ -18,10 +18,12 @@ const AllEntries = ({ isLoaded }) => {
             <>
                 <div className='grid-container'>
                     {isLoaded && entryArray.map(entry => (
-                        <NavLink className='entries' to={`/edit/${entry?.id}`}>
-                            <div className='card' key={`${entry?.id}`}>
-                                <h4 className='innertext'>{entry?.title}</h4>
-                                <p className='innertext'>{entry?.body}</p>
+                        <NavLink className='card' to={`/edit/${entry?.id}`}>
+                            <div className='' key={`${entry?.id}`}>
+                                <div className='card-content'>
+                                    <h2 className='title'>{entry?.title}</h2>
+                                    <p >{entry?.body}</p>
+                                </div>
                             </div>
                         </NavLink>
                     ))}
