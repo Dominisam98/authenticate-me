@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
-import AllEntries from '../AllEntries/allEntries';
+
 import './Main.css';
 
 
