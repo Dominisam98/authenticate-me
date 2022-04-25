@@ -20,7 +20,7 @@ function MainPage({ isLoaded }) {
     if (sessionUser) {
         sessionLinks = (
             <>
-                 <h2 className='welcome'>Welcome to sweetnote where you can create pastries</h2>
+                 <h2 className='welcome'>Welcome to sweetnote</h2>
                 <img className='welcome' alt='welcome-gif' src='https://media.giphy.com/media/l2JHZ0dIcyFo5UQGQ/giphy.gif' />
 
 
